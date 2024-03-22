@@ -1,0 +1,16 @@
+The theoretical worst-case running time of the algorithm is
+- O(n log n)
+
+Explanation:
+
+- The algorithm begins by presorting each word, sorting the letters within each word alphabetically. This presorting step is crucial as it allows the algorithm to efficiently 
+  identify anagrams by grouping words with identical sorted sequences of letters. Presorting each word typically has a time complexity of O(k log k), where k is the length of 
+  the word. Since this operation is performed for each of the n words in the input file, the total time complexity for presorting is O(n * (k log k)).
+
+- Following presorting, the algorithm utilizes a hashmap to efficiently group words into anagram groups. The hashmap uses the alphabetically sorted word as a key and an 
+  ArrayList of words as the associated value. Hashmap operations such as retrieval and insertion have an average-case time complexity of O(1), but in the worst-case scenario, 
+  where there are collisions, it can be O(n). However, given a well-designed hashmap and assuming a low likelihood of collisions, we can consider the time complexity of hashmap 
+  operations to be negligible compared to the presorting step.
+
+- Considering these factors, the overall time complexity of the algorithm is primarily determined by the presorting step. In real-world scenarios, the length of words (k) is 
+  often relatively small compared to the number of words (n), allowing us to approximate the time complexity as O(n log n), where n is the number of words in the input file.
