@@ -32,18 +32,18 @@ java AnagramSorter.java input.txt
 - Ensure that your .txt has only one word per line
 - Here is an example of how it should be formatted
 ```txt
-	tea
-	ate
-	debit
-	bidet
+tea
+ate
+debit
+bidet
 ```
 
 ## Output
 - The program will output a .txt file name AnagramGroups.txt to the directory the .java file is in
 - Here is an example of how it will output
 ```txt
-	[tea, ate]
-	[debit, bidet]
+[tea, ate]
+[debit, bidet]
 ```
 
 ## Algorithms
